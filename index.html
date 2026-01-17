@@ -5,10 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/5be7ad8ebc.js" crossorigin="anonymous"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
   <!-- Install Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom some CSS -->
+  <style>
+    @theme {
+      /* This creates the 'font-garamond' utility */
+      --font-garamond: "EB Garamond", serif;
+      --color-gold: #B68C5A;
+    }
+  </style>
 </head>
-<body class="max-w-[80%] mx-auto">
+<body class="max-w-[80%] mx-auto font-garamond">
   <header>
     <!-- Navbar Design -->
     <nav class="flex items-center justify-between py-6">
@@ -16,7 +31,7 @@
         <img src="./images/logo2.png" alt="Justic Logo">
       </div>
       <div class="menu">
-        <ul class="flex items-center gap-4 items-center">
+        <ul class="flex items-center gap-6">
           <li><a class="text-[#707070] text-[16px]" href="">Home</a></li>
           <li><a class="text-[#707070] text-[16px]" href="">Services <i class="fa-solid fa-angle-right"></i></a></li>
           <li><a class="text-[#707070] text-[16px]" href="">Cases <i class="fa-solid fa-angle-right"></i></a></li>
@@ -25,9 +40,32 @@
         </ul>
       </div>
       <div class="flex items-center">
-        <button class="bg-[#B68C5A] hover:bg-[#a17d50] px-5 py-4 rounded-md text-[#FFFFFF] text-[18px] font-bold shadow-md">Free Consultation</button>
+        <button class="bg-[#B68C5A] hover:bg-[#a17d50] px-5 py-4 rounded-lg text-[#FFFFFF] text-[18px] font-bold shadow-md">Free Consultation</button>
       </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="mt-5 bg-[linear-gradient(180deg,#111111_0%,rgba(17,17,17,0)_100%),url(images/banner.png)] h-[76vh] bg-no-repeat bg-cover bg-center flex justify-center items-center rounded-lg">
+      <div class="text-center">
+        <div class="content">
+          <h1 class="text-[67px] mb-6 font-extrabold text-white">We Provide Effective <br>Legal Solutions</h1>
+          <p class="text-white">There are many variations of passages of Lorem Ipsum available, but the majority <br>have suffered alteration in some form, by injected humour.</p>
+        </div>
+        <div class="flex items-center max-w-full mx-auto mt-6 gap-8">
+          <input 
+            type="text" 
+            placeholder="Search your services" 
+            class="w-full h-39 px-4 py-4 rounded-lg bg-gray-100 border-y border-l border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B68C5A] focus:bg-white transition-all"
+          >
+            
+          <input 
+            type="button" 
+            value="Search" 
+            class="bg-[#B68C5A] text-white w-fit h-39 px-10 py-4 rounded-lg font-semibold cursor-pointer hover:bg-[#a37b4d] transition-colors border-y border-r border-[#B68C5A]"
+          >
+        </div>
+      </div>
+    </section>
   </header>
 </body>
 </html>
